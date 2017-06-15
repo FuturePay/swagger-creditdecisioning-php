@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com//.git"
+      "url": "https://github.com/futurepay/swagger-creditdecisioning-php.git"
     }
   ],
   "require": {
-    "/": "*@dev"
+    "futurepay/swagger-creditdecisioning-php": "*@dev"
   }
 }
 ```
@@ -57,9 +57,9 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\DefaultApi();
-$credit_file = "/path/to/file.txt"; // \SplFileObject | TUNA Customer Credit File
-$first_name = "first_name_example"; // string | 
-$last_name = "last_name_example"; // string | 
+$creditFile = "/path/to/file.txt"; // \SplFileObject | TUNA Customer Credit File
+$firstName = "firstName_example"; // string | 
+$lastName = "lastName_example"; // string | 
 $city = "city_example"; // string | 
 $region = "region_example"; // string | 
 $zip = "zip_example"; // string | 
@@ -68,7 +68,7 @@ $ssn = "ssn_example"; // string |
 $address = "address_example"; // string | 
 
 try {
-    $result = $api_instance->decision($credit_file, $first_name, $last_name, $city, $region, $zip, $dob, $ssn, $address);
+    $result = $api_instance->decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->decision: ', $e->getMessage(), PHP_EOL;
@@ -92,10 +92,6 @@ Class | Method | HTTP request | Description
  - [Decision](docs/Model/Decision.md)
  - [FraudAlert](docs/Model/FraudAlert.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
- - [InlineResponse200CreditInformation](docs/Model/InlineResponse200CreditInformation.md)
- - [InlineResponse200CreditInformationFraudAlert](docs/Model/InlineResponse200CreditInformationFraudAlert.md)
- - [InlineResponse200Decision](docs/Model/InlineResponse200Decision.md)
- - [InlineResponse200SuppliedInformation](docs/Model/InlineResponse200SuppliedInformation.md)
  - [SuppliedInformation](docs/Model/SuppliedInformation.md)
 
 

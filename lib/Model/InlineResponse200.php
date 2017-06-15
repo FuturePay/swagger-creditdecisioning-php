@@ -54,9 +54,9 @@ class InlineResponse200 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'supplied_information' => '\Swagger\Client\Model\InlineResponse200SuppliedInformation',
-        'credit_information' => '\Swagger\Client\Model\InlineResponse200CreditInformation',
-        'decision' => '\Swagger\Client\Model\InlineResponse200Decision'
+        'suppliedInformation' => '\Swagger\Client\Model\SuppliedInformation',
+        'creditInformation' => '\Swagger\Client\Model\CreditInformation',
+        'decision' => '\Swagger\Client\Model\Decision'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +69,8 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'supplied_information' => 'supplied_information',
-        'credit_information' => 'credit_information',
+        'suppliedInformation' => 'supplied_information',
+        'creditInformation' => 'credit_information',
         'decision' => 'decision'
     ];
 
@@ -80,8 +80,8 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'supplied_information' => 'setSuppliedInformation',
-        'credit_information' => 'setCreditInformation',
+        'suppliedInformation' => 'setSuppliedInformation',
+        'creditInformation' => 'setCreditInformation',
         'decision' => 'setDecision'
     ];
 
@@ -91,8 +91,8 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'supplied_information' => 'getSuppliedInformation',
-        'credit_information' => 'getCreditInformation',
+        'suppliedInformation' => 'getSuppliedInformation',
+        'creditInformation' => 'getCreditInformation',
         'decision' => 'getDecision'
     ];
 
@@ -127,8 +127,8 @@ class InlineResponse200 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['supplied_information'] = isset($data['supplied_information']) ? $data['supplied_information'] : null;
-        $this->container['credit_information'] = isset($data['credit_information']) ? $data['credit_information'] : null;
+        $this->container['suppliedInformation'] = isset($data['suppliedInformation']) ? $data['suppliedInformation'] : null;
+        $this->container['creditInformation'] = isset($data['creditInformation']) ? $data['creditInformation'] : null;
         $this->container['decision'] = isset($data['decision']) ? $data['decision'] : null;
     }
 
@@ -158,50 +158,50 @@ class InlineResponse200 implements ArrayAccess
 
 
     /**
-     * Gets supplied_information
-     * @return \Swagger\Client\Model\InlineResponse200SuppliedInformation
+     * Gets suppliedInformation
+     * @return \Swagger\Client\Model\SuppliedInformation
      */
     public function getSuppliedInformation()
     {
-        return $this->container['supplied_information'];
+        return $this->container['suppliedInformation'];
     }
 
     /**
-     * Sets supplied_information
-     * @param \Swagger\Client\Model\InlineResponse200SuppliedInformation $supplied_information
+     * Sets suppliedInformation
+     * @param \Swagger\Client\Model\SuppliedInformation $suppliedInformation
      * @return $this
      */
-    public function setSuppliedInformation($supplied_information)
+    public function setSuppliedInformation($suppliedInformation)
     {
-        $this->container['supplied_information'] = $supplied_information;
+        $this->container['suppliedInformation'] = $suppliedInformation;
 
         return $this;
     }
 
     /**
-     * Gets credit_information
-     * @return \Swagger\Client\Model\InlineResponse200CreditInformation
+     * Gets creditInformation
+     * @return \Swagger\Client\Model\CreditInformation
      */
     public function getCreditInformation()
     {
-        return $this->container['credit_information'];
+        return $this->container['creditInformation'];
     }
 
     /**
-     * Sets credit_information
-     * @param \Swagger\Client\Model\InlineResponse200CreditInformation $credit_information
+     * Sets creditInformation
+     * @param \Swagger\Client\Model\CreditInformation $creditInformation
      * @return $this
      */
-    public function setCreditInformation($credit_information)
+    public function setCreditInformation($creditInformation)
     {
-        $this->container['credit_information'] = $credit_information;
+        $this->container['creditInformation'] = $creditInformation;
 
         return $this;
     }
 
     /**
      * Gets decision
-     * @return \Swagger\Client\Model\InlineResponse200Decision
+     * @return \Swagger\Client\Model\Decision
      */
     public function getDecision()
     {
@@ -210,7 +210,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets decision
-     * @param \Swagger\Client\Model\InlineResponse200Decision $decision
+     * @param \Swagger\Client\Model\Decision $decision
      * @return $this
      */
     public function setDecision($decision)

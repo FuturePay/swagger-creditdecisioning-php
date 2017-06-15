@@ -92,9 +92,9 @@ class DefaultApi
      *
      * Submit some information to perform a decision on
      *
-     * @param \SplFileObject $credit_file TUNA Customer Credit File (required)
-     * @param string $first_name  (required)
-     * @param string $last_name  (required)
+     * @param \SplFileObject $creditFile TUNA Customer Credit File (required)
+     * @param string $firstName  (required)
+     * @param string $lastName  (required)
      * @param string $city  (required)
      * @param string $region  (required)
      * @param string $zip  (required)
@@ -104,9 +104,9 @@ class DefaultApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\InlineResponse200
      */
-    public function decision($credit_file, $first_name, $last_name, $city, $region, $zip, $dob, $ssn, $address)
+    public function decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
     {
-        list($response) = $this->decisionWithHttpInfo($credit_file, $first_name, $last_name, $city, $region, $zip, $dob, $ssn, $address);
+        list($response) = $this->decisionWithHttpInfo($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address);
         return $response;
     }
 
@@ -115,9 +115,9 @@ class DefaultApi
      *
      * Submit some information to perform a decision on
      *
-     * @param \SplFileObject $credit_file TUNA Customer Credit File (required)
-     * @param string $first_name  (required)
-     * @param string $last_name  (required)
+     * @param \SplFileObject $creditFile TUNA Customer Credit File (required)
+     * @param string $firstName  (required)
+     * @param string $lastName  (required)
      * @param string $city  (required)
      * @param string $region  (required)
      * @param string $zip  (required)
@@ -127,19 +127,19 @@ class DefaultApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function decisionWithHttpInfo($credit_file, $first_name, $last_name, $city, $region, $zip, $dob, $ssn, $address)
+    public function decisionWithHttpInfo($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
     {
-        // verify the required parameter 'credit_file' is set
-        if ($credit_file === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $credit_file when calling decision');
+        // verify the required parameter 'creditFile' is set
+        if ($creditFile === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $creditFile when calling decision');
         }
-        // verify the required parameter 'first_name' is set
-        if ($first_name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $first_name when calling decision');
+        // verify the required parameter 'firstName' is set
+        if ($firstName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $firstName when calling decision');
         }
-        // verify the required parameter 'last_name' is set
-        if ($last_name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $last_name when calling decision');
+        // verify the required parameter 'lastName' is set
+        if ($lastName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lastName when calling decision');
         }
         // verify the required parameter 'city' is set
         if ($city === null) {
@@ -181,22 +181,22 @@ class DefaultApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         // form params
-        if ($credit_file !== null) {
+        if ($creditFile !== null) {
             // PHP 5.5 introduced a CurlFile object that deprecates the old @filename syntax
             // See: https://wiki.php.net/rfc/curl-file-upload
             if (function_exists('curl_file_create')) {
-                $formParams['credit_file'] = curl_file_create($this->apiClient->getSerializer()->toFormValue($credit_file));
+                $formParams['credit_file'] = curl_file_create($this->apiClient->getSerializer()->toFormValue($creditFile));
             } else {
-                $formParams['credit_file'] = '@' . $this->apiClient->getSerializer()->toFormValue($credit_file);
+                $formParams['credit_file'] = '@' . $this->apiClient->getSerializer()->toFormValue($creditFile);
             }
         }
         // form params
-        if ($first_name !== null) {
-            $formParams['first_name'] = $this->apiClient->getSerializer()->toFormValue($first_name);
+        if ($firstName !== null) {
+            $formParams['first_name'] = $this->apiClient->getSerializer()->toFormValue($firstName);
         }
         // form params
-        if ($last_name !== null) {
-            $formParams['last_name'] = $this->apiClient->getSerializer()->toFormValue($last_name);
+        if ($lastName !== null) {
+            $formParams['last_name'] = $this->apiClient->getSerializer()->toFormValue($lastName);
         }
         // form params
         if ($city !== null) {

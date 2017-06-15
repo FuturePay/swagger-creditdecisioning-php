@@ -55,10 +55,10 @@ class Decision implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'passed' => 'bool',
-        'need_more_info' => 'bool',
+        'needMoreInfo' => 'bool',
         'reason' => 'string',
-        'credit_limit' => 'int',
-        'steps_run' => 'string[]',
+        'creditLimit' => 'int',
+        'stepsRun' => 'string[]',
         'extra' => 'object'
     ];
 
@@ -73,10 +73,10 @@ class Decision implements ArrayAccess
      */
     protected static $attributeMap = [
         'passed' => 'passed',
-        'need_more_info' => 'need_more_info',
+        'needMoreInfo' => 'need_more_info',
         'reason' => 'reason',
-        'credit_limit' => 'credit_limit',
-        'steps_run' => 'steps_run',
+        'creditLimit' => 'credit_limit',
+        'stepsRun' => 'steps_run',
         'extra' => 'extra'
     ];
 
@@ -87,10 +87,10 @@ class Decision implements ArrayAccess
      */
     protected static $setters = [
         'passed' => 'setPassed',
-        'need_more_info' => 'setNeedMoreInfo',
+        'needMoreInfo' => 'setNeedMoreInfo',
         'reason' => 'setReason',
-        'credit_limit' => 'setCreditLimit',
-        'steps_run' => 'setStepsRun',
+        'creditLimit' => 'setCreditLimit',
+        'stepsRun' => 'setStepsRun',
         'extra' => 'setExtra'
     ];
 
@@ -101,10 +101,10 @@ class Decision implements ArrayAccess
      */
     protected static $getters = [
         'passed' => 'getPassed',
-        'need_more_info' => 'getNeedMoreInfo',
+        'needMoreInfo' => 'getNeedMoreInfo',
         'reason' => 'getReason',
-        'credit_limit' => 'getCreditLimit',
-        'steps_run' => 'getStepsRun',
+        'creditLimit' => 'getCreditLimit',
+        'stepsRun' => 'getStepsRun',
         'extra' => 'getExtra'
     ];
 
@@ -140,10 +140,10 @@ class Decision implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['passed'] = isset($data['passed']) ? $data['passed'] : null;
-        $this->container['need_more_info'] = isset($data['need_more_info']) ? $data['need_more_info'] : null;
+        $this->container['needMoreInfo'] = isset($data['needMoreInfo']) ? $data['needMoreInfo'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
-        $this->container['credit_limit'] = isset($data['credit_limit']) ? $data['credit_limit'] : null;
-        $this->container['steps_run'] = isset($data['steps_run']) ? $data['steps_run'] : null;
+        $this->container['creditLimit'] = isset($data['creditLimit']) ? $data['creditLimit'] : null;
+        $this->container['stepsRun'] = isset($data['stepsRun']) ? $data['stepsRun'] : null;
         $this->container['extra'] = isset($data['extra']) ? $data['extra'] : null;
     }
 
@@ -194,22 +194,22 @@ class Decision implements ArrayAccess
     }
 
     /**
-     * Gets need_more_info
+     * Gets needMoreInfo
      * @return bool
      */
     public function getNeedMoreInfo()
     {
-        return $this->container['need_more_info'];
+        return $this->container['needMoreInfo'];
     }
 
     /**
-     * Sets need_more_info
-     * @param bool $need_more_info
+     * Sets needMoreInfo
+     * @param bool $needMoreInfo
      * @return $this
      */
-    public function setNeedMoreInfo($need_more_info)
+    public function setNeedMoreInfo($needMoreInfo)
     {
-        $this->container['need_more_info'] = $need_more_info;
+        $this->container['needMoreInfo'] = $needMoreInfo;
 
         return $this;
     }
@@ -236,43 +236,43 @@ class Decision implements ArrayAccess
     }
 
     /**
-     * Gets credit_limit
+     * Gets creditLimit
      * @return int
      */
     public function getCreditLimit()
     {
-        return $this->container['credit_limit'];
+        return $this->container['creditLimit'];
     }
 
     /**
-     * Sets credit_limit
-     * @param int $credit_limit
+     * Sets creditLimit
+     * @param int $creditLimit
      * @return $this
      */
-    public function setCreditLimit($credit_limit)
+    public function setCreditLimit($creditLimit)
     {
-        $this->container['credit_limit'] = $credit_limit;
+        $this->container['creditLimit'] = $creditLimit;
 
         return $this;
     }
 
     /**
-     * Gets steps_run
+     * Gets stepsRun
      * @return string[]
      */
     public function getStepsRun()
     {
-        return $this->container['steps_run'];
+        return $this->container['stepsRun'];
     }
 
     /**
-     * Sets steps_run
-     * @param string[] $steps_run
+     * Sets stepsRun
+     * @param string[] $stepsRun
      * @return $this
      */
-    public function setStepsRun($steps_run)
+    public function setStepsRun($stepsRun)
     {
-        $this->container['steps_run'] = $steps_run;
+        $this->container['stepsRun'] = $stepsRun;
 
         return $this;
     }

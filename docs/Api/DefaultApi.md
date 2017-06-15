@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **decision**
-> \Swagger\Client\Model\InlineResponse200 decision($credit_file, $first_name, $last_name, $city, $region, $zip, $dob, $ssn, $address)
+> \Swagger\Client\Model\InlineResponse200 decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
 
 Submit some information to perform a decision on
 
@@ -20,9 +20,9 @@ Submit some information to perform a decision on
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\DefaultApi();
-$credit_file = "/path/to/file.txt"; // \SplFileObject | TUNA Customer Credit File
-$first_name = "first_name_example"; // string | 
-$last_name = "last_name_example"; // string | 
+$creditFile = "/path/to/file.txt"; // \SplFileObject | TUNA Customer Credit File
+$firstName = "firstName_example"; // string | 
+$lastName = "lastName_example"; // string | 
 $city = "city_example"; // string | 
 $region = "region_example"; // string | 
 $zip = "zip_example"; // string | 
@@ -31,7 +31,7 @@ $ssn = "ssn_example"; // string |
 $address = "address_example"; // string | 
 
 try {
-    $result = $api_instance->decision($credit_file, $first_name, $last_name, $city, $region, $zip, $dob, $ssn, $address);
+    $result = $api_instance->decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->decision: ', $e->getMessage(), PHP_EOL;
@@ -43,9 +43,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credit_file** | **\SplFileObject**| TUNA Customer Credit File |
- **first_name** | **string**|  |
- **last_name** | **string**|  |
+ **creditFile** | **\SplFileObject**| TUNA Customer Credit File |
+ **firstName** | **string**|  |
+ **lastName** | **string**|  |
  **city** | **string**|  |
  **region** | **string**|  |
  **zip** | **string**|  |

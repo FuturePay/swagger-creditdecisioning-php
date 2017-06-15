@@ -54,9 +54,9 @@ class SuppliedInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user_id' => 'int',
-        'first_name' => 'string',
-        'last_name' => 'string',
+        'userId' => 'int',
+        'firstName' => 'string',
+        'lastName' => 'string',
         'address' => 'string',
         'region' => 'string',
         'city' => 'string',
@@ -75,9 +75,9 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'first_name' => 'first_name',
-        'last_name' => 'last_name',
+        'userId' => 'user_id',
+        'firstName' => 'first_name',
+        'lastName' => 'last_name',
         'address' => 'address',
         'region' => 'region',
         'city' => 'city',
@@ -92,9 +92,9 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
+        'userId' => 'setUserId',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
         'address' => 'setAddress',
         'region' => 'setRegion',
         'city' => 'setCity',
@@ -109,9 +109,9 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
+        'userId' => 'getUserId',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
         'address' => 'getAddress',
         'region' => 'getRegion',
         'city' => 'getCity',
@@ -151,9 +151,9 @@ class SuppliedInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
+        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
+        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
@@ -188,64 +188,64 @@ class SuppliedInformation implements ArrayAccess
 
 
     /**
-     * Gets user_id
+     * Gets userId
      * @return int
      */
     public function getUserId()
     {
-        return $this->container['user_id'];
+        return $this->container['userId'];
     }
 
     /**
-     * Sets user_id
-     * @param int $user_id
+     * Sets userId
+     * @param int $userId
      * @return $this
      */
-    public function setUserId($user_id)
+    public function setUserId($userId)
     {
-        $this->container['user_id'] = $user_id;
+        $this->container['userId'] = $userId;
 
         return $this;
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      * @return string
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
-     * @param string $first_name
+     * Sets firstName
+     * @param string $firstName
      * @return $this
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      * @return string
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
-     * @param string $last_name
+     * Sets lastName
+     * @param string $lastName
      * @return $this
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }

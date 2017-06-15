@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_id** | **int** |  | [optional] 
-**first_name** | **string** |  | [optional] 
-**last_name** | **string** |  | [optional] 
+**userId** | **int** |  | [optional] 
+**firstName** | **string** |  | [optional] 
+**lastName** | **string** |  | [optional] 
 **address** | **string** |  | [optional] 
 **region** | **string** |  | [optional] 
 **city** | **string** |  | [optional] 

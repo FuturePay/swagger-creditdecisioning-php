@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ofac_message** | **string** |  | [optional] 
-**fico_score** | **int** |  | [optional] 
-**vantage_score** | **int** |  | [optional] 
-**debit_income_estimator_score** | **int** |  | [optional] 
+**ofacMessage** | **string** |  | [optional] 
+**ficoScore** | **int** |  | [optional] 
+**vantageScore** | **int** |  | [optional] 
+**debitIncomeEstimatorScore** | **int** |  | [optional] 
 **ssn** | **string** |  | [optional] 
 **dob** | **string** |  | [optional] 
-**fraud_alert** | [**\Swagger\Client\Model\InlineResponse200CreditInformationFraudAlert**](InlineResponse200CreditInformationFraudAlert.md) |  | [optional] 
-**deceased_date** | **string** |  | [optional] 
+**fraudAlert** | [**\Swagger\Client\Model\FraudAlert**](FraudAlert.md) |  | [optional] 
+**deceasedDate** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -54,14 +54,14 @@ class CreditInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ofac_message' => 'string',
-        'fico_score' => 'int',
-        'vantage_score' => 'int',
-        'debit_income_estimator_score' => 'int',
+        'ofacMessage' => 'string',
+        'ficoScore' => 'int',
+        'vantageScore' => 'int',
+        'debitIncomeEstimatorScore' => 'int',
         'ssn' => 'string',
         'dob' => 'string',
-        'fraud_alert' => '\Swagger\Client\Model\InlineResponse200CreditInformationFraudAlert',
-        'deceased_date' => 'string'
+        'fraudAlert' => '\Swagger\Client\Model\FraudAlert',
+        'deceasedDate' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -74,14 +74,14 @@ class CreditInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ofac_message' => 'ofac_message',
-        'fico_score' => 'fico_score',
-        'vantage_score' => 'vantage_score',
-        'debit_income_estimator_score' => 'debit_income_estimator_score',
+        'ofacMessage' => 'ofac_message',
+        'ficoScore' => 'fico_score',
+        'vantageScore' => 'vantage_score',
+        'debitIncomeEstimatorScore' => 'debit_income_estimator_score',
         'ssn' => 'ssn',
         'dob' => 'dob',
-        'fraud_alert' => 'fraud_alert',
-        'deceased_date' => 'deceased_date'
+        'fraudAlert' => 'fraud_alert',
+        'deceasedDate' => 'deceased_date'
     ];
 
 
@@ -90,14 +90,14 @@ class CreditInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ofac_message' => 'setOfacMessage',
-        'fico_score' => 'setFicoScore',
-        'vantage_score' => 'setVantageScore',
-        'debit_income_estimator_score' => 'setDebitIncomeEstimatorScore',
+        'ofacMessage' => 'setOfacMessage',
+        'ficoScore' => 'setFicoScore',
+        'vantageScore' => 'setVantageScore',
+        'debitIncomeEstimatorScore' => 'setDebitIncomeEstimatorScore',
         'ssn' => 'setSsn',
         'dob' => 'setDob',
-        'fraud_alert' => 'setFraudAlert',
-        'deceased_date' => 'setDeceasedDate'
+        'fraudAlert' => 'setFraudAlert',
+        'deceasedDate' => 'setDeceasedDate'
     ];
 
 
@@ -106,14 +106,14 @@ class CreditInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ofac_message' => 'getOfacMessage',
-        'fico_score' => 'getFicoScore',
-        'vantage_score' => 'getVantageScore',
-        'debit_income_estimator_score' => 'getDebitIncomeEstimatorScore',
+        'ofacMessage' => 'getOfacMessage',
+        'ficoScore' => 'getFicoScore',
+        'vantageScore' => 'getVantageScore',
+        'debitIncomeEstimatorScore' => 'getDebitIncomeEstimatorScore',
         'ssn' => 'getSsn',
         'dob' => 'getDob',
-        'fraud_alert' => 'getFraudAlert',
-        'deceased_date' => 'getDeceasedDate'
+        'fraudAlert' => 'getFraudAlert',
+        'deceasedDate' => 'getDeceasedDate'
     ];
 
     public static function attributeMap()
@@ -147,14 +147,14 @@ class CreditInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ofac_message'] = isset($data['ofac_message']) ? $data['ofac_message'] : null;
-        $this->container['fico_score'] = isset($data['fico_score']) ? $data['fico_score'] : null;
-        $this->container['vantage_score'] = isset($data['vantage_score']) ? $data['vantage_score'] : null;
-        $this->container['debit_income_estimator_score'] = isset($data['debit_income_estimator_score']) ? $data['debit_income_estimator_score'] : null;
+        $this->container['ofacMessage'] = isset($data['ofacMessage']) ? $data['ofacMessage'] : null;
+        $this->container['ficoScore'] = isset($data['ficoScore']) ? $data['ficoScore'] : null;
+        $this->container['vantageScore'] = isset($data['vantageScore']) ? $data['vantageScore'] : null;
+        $this->container['debitIncomeEstimatorScore'] = isset($data['debitIncomeEstimatorScore']) ? $data['debitIncomeEstimatorScore'] : null;
         $this->container['ssn'] = isset($data['ssn']) ? $data['ssn'] : null;
         $this->container['dob'] = isset($data['dob']) ? $data['dob'] : null;
-        $this->container['fraud_alert'] = isset($data['fraud_alert']) ? $data['fraud_alert'] : null;
-        $this->container['deceased_date'] = isset($data['deceased_date']) ? $data['deceased_date'] : null;
+        $this->container['fraudAlert'] = isset($data['fraudAlert']) ? $data['fraudAlert'] : null;
+        $this->container['deceasedDate'] = isset($data['deceasedDate']) ? $data['deceasedDate'] : null;
     }
 
     /**
@@ -183,85 +183,85 @@ class CreditInformation implements ArrayAccess
 
 
     /**
-     * Gets ofac_message
+     * Gets ofacMessage
      * @return string
      */
     public function getOfacMessage()
     {
-        return $this->container['ofac_message'];
+        return $this->container['ofacMessage'];
     }
 
     /**
-     * Sets ofac_message
-     * @param string $ofac_message
+     * Sets ofacMessage
+     * @param string $ofacMessage
      * @return $this
      */
-    public function setOfacMessage($ofac_message)
+    public function setOfacMessage($ofacMessage)
     {
-        $this->container['ofac_message'] = $ofac_message;
+        $this->container['ofacMessage'] = $ofacMessage;
 
         return $this;
     }
 
     /**
-     * Gets fico_score
+     * Gets ficoScore
      * @return int
      */
     public function getFicoScore()
     {
-        return $this->container['fico_score'];
+        return $this->container['ficoScore'];
     }
 
     /**
-     * Sets fico_score
-     * @param int $fico_score
+     * Sets ficoScore
+     * @param int $ficoScore
      * @return $this
      */
-    public function setFicoScore($fico_score)
+    public function setFicoScore($ficoScore)
     {
-        $this->container['fico_score'] = $fico_score;
+        $this->container['ficoScore'] = $ficoScore;
 
         return $this;
     }
 
     /**
-     * Gets vantage_score
+     * Gets vantageScore
      * @return int
      */
     public function getVantageScore()
     {
-        return $this->container['vantage_score'];
+        return $this->container['vantageScore'];
     }
 
     /**
-     * Sets vantage_score
-     * @param int $vantage_score
+     * Sets vantageScore
+     * @param int $vantageScore
      * @return $this
      */
-    public function setVantageScore($vantage_score)
+    public function setVantageScore($vantageScore)
     {
-        $this->container['vantage_score'] = $vantage_score;
+        $this->container['vantageScore'] = $vantageScore;
 
         return $this;
     }
 
     /**
-     * Gets debit_income_estimator_score
+     * Gets debitIncomeEstimatorScore
      * @return int
      */
     public function getDebitIncomeEstimatorScore()
     {
-        return $this->container['debit_income_estimator_score'];
+        return $this->container['debitIncomeEstimatorScore'];
     }
 
     /**
-     * Sets debit_income_estimator_score
-     * @param int $debit_income_estimator_score
+     * Sets debitIncomeEstimatorScore
+     * @param int $debitIncomeEstimatorScore
      * @return $this
      */
-    public function setDebitIncomeEstimatorScore($debit_income_estimator_score)
+    public function setDebitIncomeEstimatorScore($debitIncomeEstimatorScore)
     {
-        $this->container['debit_income_estimator_score'] = $debit_income_estimator_score;
+        $this->container['debitIncomeEstimatorScore'] = $debitIncomeEstimatorScore;
 
         return $this;
     }
@@ -309,43 +309,43 @@ class CreditInformation implements ArrayAccess
     }
 
     /**
-     * Gets fraud_alert
-     * @return \Swagger\Client\Model\InlineResponse200CreditInformationFraudAlert
+     * Gets fraudAlert
+     * @return \Swagger\Client\Model\FraudAlert
      */
     public function getFraudAlert()
     {
-        return $this->container['fraud_alert'];
+        return $this->container['fraudAlert'];
     }
 
     /**
-     * Sets fraud_alert
-     * @param \Swagger\Client\Model\InlineResponse200CreditInformationFraudAlert $fraud_alert
+     * Sets fraudAlert
+     * @param \Swagger\Client\Model\FraudAlert $fraudAlert
      * @return $this
      */
-    public function setFraudAlert($fraud_alert)
+    public function setFraudAlert($fraudAlert)
     {
-        $this->container['fraud_alert'] = $fraud_alert;
+        $this->container['fraudAlert'] = $fraudAlert;
 
         return $this;
     }
 
     /**
-     * Gets deceased_date
+     * Gets deceasedDate
      * @return string
      */
     public function getDeceasedDate()
     {
-        return $this->container['deceased_date'];
+        return $this->container['deceasedDate'];
     }
 
     /**
-     * Sets deceased_date
-     * @param string $deceased_date
+     * Sets deceasedDate
+     * @param string $deceasedDate
      * @return $this
      */
-    public function setDeceasedDate($deceased_date)
+    public function setDeceasedDate($deceasedDate)
     {
-        $this->container['deceased_date'] = $deceased_date;
+        $this->container['deceasedDate'] = $deceasedDate;
 
         return $this;
     }

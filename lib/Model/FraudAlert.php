@@ -58,9 +58,9 @@ class FraudAlert implements ArrayAccess
         'code' => 'string',
         'description' => 'string',
         'recovery' => 'string',
-        'addon_code' => 'string',
-        'accept_signup_ind' => 'string',
-        'need_more_info' => 'string'
+        'addonCode' => 'string',
+        'acceptSignupInd' => 'string',
+        'needMoreInfo' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -77,9 +77,9 @@ class FraudAlert implements ArrayAccess
         'code' => 'code',
         'description' => 'description',
         'recovery' => 'recovery',
-        'addon_code' => 'addon_code',
-        'accept_signup_ind' => 'accept_signup_ind',
-        'need_more_info' => 'need_more_info'
+        'addonCode' => 'addon_code',
+        'acceptSignupInd' => 'accept_signup_ind',
+        'needMoreInfo' => 'need_more_info'
     ];
 
 
@@ -92,9 +92,9 @@ class FraudAlert implements ArrayAccess
         'code' => 'setCode',
         'description' => 'setDescription',
         'recovery' => 'setRecovery',
-        'addon_code' => 'setAddonCode',
-        'accept_signup_ind' => 'setAcceptSignupInd',
-        'need_more_info' => 'setNeedMoreInfo'
+        'addonCode' => 'setAddonCode',
+        'acceptSignupInd' => 'setAcceptSignupInd',
+        'needMoreInfo' => 'setNeedMoreInfo'
     ];
 
 
@@ -107,9 +107,9 @@ class FraudAlert implements ArrayAccess
         'code' => 'getCode',
         'description' => 'getDescription',
         'recovery' => 'getRecovery',
-        'addon_code' => 'getAddonCode',
-        'accept_signup_ind' => 'getAcceptSignupInd',
-        'need_more_info' => 'getNeedMoreInfo'
+        'addonCode' => 'getAddonCode',
+        'acceptSignupInd' => 'getAcceptSignupInd',
+        'needMoreInfo' => 'getNeedMoreInfo'
     ];
 
     public static function attributeMap()
@@ -147,9 +147,9 @@ class FraudAlert implements ArrayAccess
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['recovery'] = isset($data['recovery']) ? $data['recovery'] : null;
-        $this->container['addon_code'] = isset($data['addon_code']) ? $data['addon_code'] : null;
-        $this->container['accept_signup_ind'] = isset($data['accept_signup_ind']) ? $data['accept_signup_ind'] : null;
-        $this->container['need_more_info'] = isset($data['need_more_info']) ? $data['need_more_info'] : null;
+        $this->container['addonCode'] = isset($data['addonCode']) ? $data['addonCode'] : null;
+        $this->container['acceptSignupInd'] = isset($data['acceptSignupInd']) ? $data['acceptSignupInd'] : null;
+        $this->container['needMoreInfo'] = isset($data['needMoreInfo']) ? $data['needMoreInfo'] : null;
     }
 
     /**
@@ -262,64 +262,64 @@ class FraudAlert implements ArrayAccess
     }
 
     /**
-     * Gets addon_code
+     * Gets addonCode
      * @return string
      */
     public function getAddonCode()
     {
-        return $this->container['addon_code'];
+        return $this->container['addonCode'];
     }
 
     /**
-     * Sets addon_code
-     * @param string $addon_code
+     * Sets addonCode
+     * @param string $addonCode
      * @return $this
      */
-    public function setAddonCode($addon_code)
+    public function setAddonCode($addonCode)
     {
-        $this->container['addon_code'] = $addon_code;
+        $this->container['addonCode'] = $addonCode;
 
         return $this;
     }
 
     /**
-     * Gets accept_signup_ind
+     * Gets acceptSignupInd
      * @return string
      */
     public function getAcceptSignupInd()
     {
-        return $this->container['accept_signup_ind'];
+        return $this->container['acceptSignupInd'];
     }
 
     /**
-     * Sets accept_signup_ind
-     * @param string $accept_signup_ind
+     * Sets acceptSignupInd
+     * @param string $acceptSignupInd
      * @return $this
      */
-    public function setAcceptSignupInd($accept_signup_ind)
+    public function setAcceptSignupInd($acceptSignupInd)
     {
-        $this->container['accept_signup_ind'] = $accept_signup_ind;
+        $this->container['acceptSignupInd'] = $acceptSignupInd;
 
         return $this;
     }
 
     /**
-     * Gets need_more_info
+     * Gets needMoreInfo
      * @return string
      */
     public function getNeedMoreInfo()
     {
-        return $this->container['need_more_info'];
+        return $this->container['needMoreInfo'];
     }
 
     /**
-     * Sets need_more_info
-     * @param string $need_more_info
+     * Sets needMoreInfo
+     * @param string $needMoreInfo
      * @return $this
      */
-    public function setNeedMoreInfo($need_more_info)
+    public function setNeedMoreInfo($needMoreInfo)
     {
-        $this->container['need_more_info'] = $need_more_info;
+        $this->container['needMoreInfo'] = $needMoreInfo;
 
         return $this;
     }
