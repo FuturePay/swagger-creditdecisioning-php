@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Adding Jenkinsfile"
+    release_note="Added missing swagger definition"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

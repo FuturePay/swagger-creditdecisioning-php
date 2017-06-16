@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **ofacMessage** | **string** |  | [optional] 
 **ficoScore** | **int** |  | [optional] 
 **vantageScore** | **int** |  | [optional] 
+**incomeEstimatorScore** | **int** |  | [optional] 
 **debitIncomeEstimatorScore** | **int** |  | [optional] 
 **ssn** | **string** |  | [optional] 
 **dob** | **string** |  | [optional] 

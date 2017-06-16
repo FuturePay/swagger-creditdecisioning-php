@@ -57,6 +57,7 @@ class CreditInformation implements ArrayAccess
         'ofacMessage' => 'string',
         'ficoScore' => 'int',
         'vantageScore' => 'int',
+        'incomeEstimatorScore' => 'int',
         'debitIncomeEstimatorScore' => 'int',
         'ssn' => 'string',
         'dob' => 'string',
@@ -77,6 +78,7 @@ class CreditInformation implements ArrayAccess
         'ofacMessage' => 'ofac_message',
         'ficoScore' => 'fico_score',
         'vantageScore' => 'vantage_score',
+        'incomeEstimatorScore' => 'income_estimator_score',
         'debitIncomeEstimatorScore' => 'debit_income_estimator_score',
         'ssn' => 'ssn',
         'dob' => 'dob',
@@ -93,6 +95,7 @@ class CreditInformation implements ArrayAccess
         'ofacMessage' => 'setOfacMessage',
         'ficoScore' => 'setFicoScore',
         'vantageScore' => 'setVantageScore',
+        'incomeEstimatorScore' => 'setIncomeEstimatorScore',
         'debitIncomeEstimatorScore' => 'setDebitIncomeEstimatorScore',
         'ssn' => 'setSsn',
         'dob' => 'setDob',
@@ -109,6 +112,7 @@ class CreditInformation implements ArrayAccess
         'ofacMessage' => 'getOfacMessage',
         'ficoScore' => 'getFicoScore',
         'vantageScore' => 'getVantageScore',
+        'incomeEstimatorScore' => 'getIncomeEstimatorScore',
         'debitIncomeEstimatorScore' => 'getDebitIncomeEstimatorScore',
         'ssn' => 'getSsn',
         'dob' => 'getDob',
@@ -150,6 +154,7 @@ class CreditInformation implements ArrayAccess
         $this->container['ofacMessage'] = isset($data['ofacMessage']) ? $data['ofacMessage'] : null;
         $this->container['ficoScore'] = isset($data['ficoScore']) ? $data['ficoScore'] : null;
         $this->container['vantageScore'] = isset($data['vantageScore']) ? $data['vantageScore'] : null;
+        $this->container['incomeEstimatorScore'] = isset($data['incomeEstimatorScore']) ? $data['incomeEstimatorScore'] : null;
         $this->container['debitIncomeEstimatorScore'] = isset($data['debitIncomeEstimatorScore']) ? $data['debitIncomeEstimatorScore'] : null;
         $this->container['ssn'] = isset($data['ssn']) ? $data['ssn'] : null;
         $this->container['dob'] = isset($data['dob']) ? $data['dob'] : null;
@@ -241,6 +246,27 @@ class CreditInformation implements ArrayAccess
     public function setVantageScore($vantageScore)
     {
         $this->container['vantageScore'] = $vantageScore;
+
+        return $this;
+    }
+
+    /**
+     * Gets incomeEstimatorScore
+     * @return int
+     */
+    public function getIncomeEstimatorScore()
+    {
+        return $this->container['incomeEstimatorScore'];
+    }
+
+    /**
+     * Sets incomeEstimatorScore
+     * @param int $incomeEstimatorScore
+     * @return $this
+     */
+    public function setIncomeEstimatorScore($incomeEstimatorScore)
+    {
+        $this->container['incomeEstimatorScore'] = $incomeEstimatorScore;
 
         return $this;
     }
