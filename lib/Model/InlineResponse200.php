@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  FuturePay\SDK\CreditDecisioning
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace FuturePay\SDK\CreditDecisioning\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * InlineResponse200 Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     FuturePay\SDK\CreditDecisioning
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,9 +54,9 @@ class InlineResponse200 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'suppliedInformation' => '\Swagger\Client\Model\SuppliedInformation',
-        'creditInformation' => '\Swagger\Client\Model\CreditInformation',
-        'decision' => '\Swagger\Client\Model\Decision'
+        'suppliedInformation' => '\FuturePay\SDK\CreditDecisioning\Model\SuppliedInformation',
+        'creditInformation' => '\FuturePay\SDK\CreditDecisioning\Model\CreditInformation',
+        'decision' => '\FuturePay\SDK\CreditDecisioning\Model\Decision'
     ];
 
     public static function swaggerTypes()
@@ -159,7 +159,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Gets suppliedInformation
-     * @return \Swagger\Client\Model\SuppliedInformation
+     * @return \FuturePay\SDK\CreditDecisioning\Model\SuppliedInformation
      */
     public function getSuppliedInformation()
     {
@@ -168,7 +168,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets suppliedInformation
-     * @param \Swagger\Client\Model\SuppliedInformation $suppliedInformation
+     * @param \FuturePay\SDK\CreditDecisioning\Model\SuppliedInformation $suppliedInformation
      * @return $this
      */
     public function setSuppliedInformation($suppliedInformation)
@@ -180,7 +180,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Gets creditInformation
-     * @return \Swagger\Client\Model\CreditInformation
+     * @return \FuturePay\SDK\CreditDecisioning\Model\CreditInformation
      */
     public function getCreditInformation()
     {
@@ -189,7 +189,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets creditInformation
-     * @param \Swagger\Client\Model\CreditInformation $creditInformation
+     * @param \FuturePay\SDK\CreditDecisioning\Model\CreditInformation $creditInformation
      * @return $this
      */
     public function setCreditInformation($creditInformation)
@@ -201,7 +201,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Gets decision
-     * @return \Swagger\Client\Model\Decision
+     * @return \FuturePay\SDK\CreditDecisioning\Model\Decision
      */
     public function getDecision()
     {
@@ -210,7 +210,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets decision
-     * @param \Swagger\Client\Model\Decision $decision
+     * @param \FuturePay\SDK\CreditDecisioning\Model\Decision $decision
      * @return $this
      */
     public function setDecision($decision)
@@ -271,10 +271,10 @@ class InlineResponse200 implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\FuturePay\SDK\CreditDecisioning\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\FuturePay\SDK\CreditDecisioning\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

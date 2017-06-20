@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  FuturePay\SDK\CreditDecisioning
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace FuturePay\SDK\CreditDecisioning\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * CreditInformation Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     FuturePay\SDK\CreditDecisioning
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class CreditInformation implements ArrayAccess
         'debitIncomeEstimatorScore' => 'int',
         'ssn' => 'string',
         'dob' => 'string',
-        'fraudAlert' => '\Swagger\Client\Model\FraudAlert',
+        'fraudAlert' => '\FuturePay\SDK\CreditDecisioning\Model\FraudAlert',
         'deceasedDate' => 'string'
     ];
 
@@ -336,7 +336,7 @@ class CreditInformation implements ArrayAccess
 
     /**
      * Gets fraudAlert
-     * @return \Swagger\Client\Model\FraudAlert
+     * @return \FuturePay\SDK\CreditDecisioning\Model\FraudAlert
      */
     public function getFraudAlert()
     {
@@ -345,7 +345,7 @@ class CreditInformation implements ArrayAccess
 
     /**
      * Sets fraudAlert
-     * @param \Swagger\Client\Model\FraudAlert $fraudAlert
+     * @param \FuturePay\SDK\CreditDecisioning\Model\FraudAlert $fraudAlert
      * @return $this
      */
     public function setFraudAlert($fraudAlert)
@@ -427,10 +427,10 @@ class CreditInformation implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\FuturePay\SDK\CreditDecisioning\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\FuturePay\SDK\CreditDecisioning\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

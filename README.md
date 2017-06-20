@@ -56,7 +56,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new FuturePay\SDK\CreditDecisioning\Api\DefaultApi();
 $creditFile = "/path/to/file.txt"; // \SplFileObject | TUNA Customer Credit File
 $firstName = "firstName_example"; // string | 
 $lastName = "lastName_example"; // string | 

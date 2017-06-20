@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  FuturePay\SDK\CreditDecisioning
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace FuturePay\SDK\CreditDecisioning\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \FuturePay\SDK\CreditDecisioning\ApiClient;
+use \FuturePay\SDK\CreditDecisioning\ApiException;
+use \FuturePay\SDK\CreditDecisioning\Configuration;
+use \FuturePay\SDK\CreditDecisioning\ObjectSerializer;
 
 /**
  * DefaultApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  FuturePay\SDK\CreditDecisioning
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class DefaultApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \FuturePay\SDK\CreditDecisioning\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \FuturePay\SDK\CreditDecisioning\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\FuturePay\SDK\CreditDecisioning\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class DefaultApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \FuturePay\SDK\CreditDecisioning\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class DefaultApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \FuturePay\SDK\CreditDecisioning\ApiClient $apiClient set the API client
      *
      * @return DefaultApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\FuturePay\SDK\CreditDecisioning\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -101,8 +101,8 @@ class DefaultApi
      * @param string $dob  (required)
      * @param string $ssn  (required)
      * @param string $address  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @throws \FuturePay\SDK\CreditDecisioning\ApiException on non-2xx response
+     * @return \FuturePay\SDK\CreditDecisioning\Model\InlineResponse200
      */
     public function decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
     {
@@ -124,8 +124,8 @@ class DefaultApi
      * @param string $dob  (required)
      * @param string $ssn  (required)
      * @param string $address  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \FuturePay\SDK\CreditDecisioning\ApiException on non-2xx response
+     * @return array of \FuturePay\SDK\CreditDecisioning\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function decisionWithHttpInfo($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
     {
@@ -237,15 +237,15 @@ class DefaultApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse200',
+                '\FuturePay\SDK\CreditDecisioning\Model\InlineResponse200',
                 '/decision'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\FuturePay\SDK\CreditDecisioning\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\FuturePay\SDK\CreditDecisioning\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

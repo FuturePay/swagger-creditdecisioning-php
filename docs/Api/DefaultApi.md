@@ -1,4 +1,4 @@
-# Swagger\Client\DefaultApi
+# FuturePay\SDK\CreditDecisioning\DefaultApi
 
 All URIs are relative to *http://localhost:8085/v1*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **decision**
-> \Swagger\Client\Model\InlineResponse200 decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
+> \FuturePay\SDK\CreditDecisioning\Model\InlineResponse200 decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
 
 Submit some information to perform a decision on
 
@@ -19,7 +19,7 @@ Submit some information to perform a decision on
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new FuturePay\SDK\CreditDecisioning\Api\DefaultApi();
 $creditFile = "/path/to/file.txt"; // \SplFileObject | TUNA Customer Credit File
 $firstName = "firstName_example"; // string | 
 $lastName = "lastName_example"; // string | 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\FuturePay\SDK\CreditDecisioning\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
