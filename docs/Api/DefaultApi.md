@@ -1,6 +1,6 @@
 # FuturePay\SDK\CreditDecisioning\DefaultApi
 
-All URIs are relative to *http://localhost:8085/v1*
+All URIs are relative to *http://creditdecisioning.futurepay.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

@@ -79,7 +79,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:8085/v1*
+All URIs are relative to *http://creditdecisioning.futurepay.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
