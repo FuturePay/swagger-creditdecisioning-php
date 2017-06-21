@@ -56,6 +56,7 @@ class CreditInformation implements ArrayAccess
     protected static $swaggerTypes = [
         'ofacMessage' => 'string',
         'ficoScore' => 'int',
+        'ficoFactors' => 'string[]',
         'vantageScore' => 'int',
         'incomeEstimatorScore' => 'int',
         'debitIncomeEstimatorScore' => 'int',
@@ -77,6 +78,7 @@ class CreditInformation implements ArrayAccess
     protected static $attributeMap = [
         'ofacMessage' => 'ofac_message',
         'ficoScore' => 'fico_score',
+        'ficoFactors' => 'fico_factors',
         'vantageScore' => 'vantage_score',
         'incomeEstimatorScore' => 'income_estimator_score',
         'debitIncomeEstimatorScore' => 'debit_income_estimator_score',
@@ -94,6 +96,7 @@ class CreditInformation implements ArrayAccess
     protected static $setters = [
         'ofacMessage' => 'setOfacMessage',
         'ficoScore' => 'setFicoScore',
+        'ficoFactors' => 'setFicoFactors',
         'vantageScore' => 'setVantageScore',
         'incomeEstimatorScore' => 'setIncomeEstimatorScore',
         'debitIncomeEstimatorScore' => 'setDebitIncomeEstimatorScore',
@@ -111,6 +114,7 @@ class CreditInformation implements ArrayAccess
     protected static $getters = [
         'ofacMessage' => 'getOfacMessage',
         'ficoScore' => 'getFicoScore',
+        'ficoFactors' => 'getFicoFactors',
         'vantageScore' => 'getVantageScore',
         'incomeEstimatorScore' => 'getIncomeEstimatorScore',
         'debitIncomeEstimatorScore' => 'getDebitIncomeEstimatorScore',
@@ -153,6 +157,7 @@ class CreditInformation implements ArrayAccess
     {
         $this->container['ofacMessage'] = isset($data['ofacMessage']) ? $data['ofacMessage'] : null;
         $this->container['ficoScore'] = isset($data['ficoScore']) ? $data['ficoScore'] : null;
+        $this->container['ficoFactors'] = isset($data['ficoFactors']) ? $data['ficoFactors'] : null;
         $this->container['vantageScore'] = isset($data['vantageScore']) ? $data['vantageScore'] : null;
         $this->container['incomeEstimatorScore'] = isset($data['incomeEstimatorScore']) ? $data['incomeEstimatorScore'] : null;
         $this->container['debitIncomeEstimatorScore'] = isset($data['debitIncomeEstimatorScore']) ? $data['debitIncomeEstimatorScore'] : null;
@@ -225,6 +230,27 @@ class CreditInformation implements ArrayAccess
     public function setFicoScore($ficoScore)
     {
         $this->container['ficoScore'] = $ficoScore;
+
+        return $this;
+    }
+
+    /**
+     * Gets ficoFactors
+     * @return string[]
+     */
+    public function getFicoFactors()
+    {
+        return $this->container['ficoFactors'];
+    }
+
+    /**
+     * Sets ficoFactors
+     * @param string[] $ficoFactors
+     * @return $this
+     */
+    public function setFicoFactors($ficoFactors)
+    {
+        $this->container['ficoFactors'] = $ficoFactors;
 
         return $this;
     }

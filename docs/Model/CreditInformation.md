@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ofacMessage** | **string** |  | [optional] 
 **ficoScore** | **int** |  | [optional] 
+**ficoFactors** | **string[]** |  | [optional] 
 **vantageScore** | **int** |  | [optional] 
 **incomeEstimatorScore** | **int** |  | [optional] 
 **debitIncomeEstimatorScore** | **int** |  | [optional] 
