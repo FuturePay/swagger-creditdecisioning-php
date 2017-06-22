@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="removed unnecessary composer deps"
+    release_note="made build file absolute path"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
