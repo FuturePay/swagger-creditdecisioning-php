@@ -166,7 +166,7 @@ class DefaultApi
             throw new \InvalidArgumentException('Missing the required parameter $address when calling decision');
         }
         // parse inputs
-        $resourcePath = "/decision";
+        $resourcePath = "/v1/decision";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -238,7 +238,7 @@ class DefaultApi
                 $httpBody,
                 $headerParams,
                 '\FuturePay\SDK\CreditDecisioning\Model\InlineResponse200',
-                '/decision'
+                '/v1/decision'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\FuturePay\SDK\CreditDecisioning\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];

@@ -79,11 +79,11 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://creditdecisioning.futurepay.com/v1*
+All URIs are relative to *http://micro.futurepay.com/creditdecisioning*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**decision**](docs/Api/DefaultApi.md#decision) | **POST** /decision | Submit some information to perform a decision on
+*DefaultApi* | [**decision**](docs/Api/DefaultApi.md#decision) | **POST** /v1/decision | Submit some information to perform a decision on
 
 
 ## Documentation For Models
