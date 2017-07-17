@@ -1,6 +1,6 @@
 # FuturePay\SDK\CreditDecisioning\DefaultApi
 
-All URIs are relative to *http://micro.futurepay.com/creditdecisioning*
+All URIs are relative to *http://creditdecisioning.futurepay.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

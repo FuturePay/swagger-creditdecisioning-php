@@ -79,7 +79,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://micro.futurepay.com/creditdecisioning*
+All URIs are relative to *http://creditdecisioning.futurepay.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

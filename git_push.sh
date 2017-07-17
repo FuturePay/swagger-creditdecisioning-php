@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="adjusted some infrastructure level things after experimenting with ecs"
+    release_note="removed redundant base-path and renamed service to be creditdecisioning.futurepay.com"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

@@ -88,7 +88,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://micro.futurepay.com/creditdecisioning';
+    protected $host = 'http://creditdecisioning.futurepay.com';
 
     /**
      * Timeout (second) of the HTTP request, by default set to 0, no timeout
