@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="woopsies, changed  to "
+    release_note="should always tag latest"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
