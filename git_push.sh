@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="updated base path to proper host name"
+    release_note="added in some confd config files"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
