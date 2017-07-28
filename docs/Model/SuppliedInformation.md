@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userId** | **int** |  | [optional] 
 **firstName** | **string** |  | [optional] 
 **lastName** | **string** |  | [optional] 
 **address** | **string** |  | [optional] 

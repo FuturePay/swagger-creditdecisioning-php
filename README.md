@@ -57,18 +57,10 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new FuturePay\SDK\CreditDecisioning\Api\DefaultApi();
-$creditFile = "/path/to/file.txt"; // \SplFileObject | TUNA Customer Credit File
-$firstName = "firstName_example"; // string | 
-$lastName = "lastName_example"; // string | 
-$city = "city_example"; // string | 
-$region = "region_example"; // string | 
-$zip = "zip_example"; // string | 
-$dob = "dob_example"; // string | 
-$ssn = "ssn_example"; // string | 
-$address = "address_example"; // string | 
+$data = new \FuturePay\SDK\CreditDecisioning\Model\Data(); // \FuturePay\SDK\CreditDecisioning\Model\Data | User information
 
 try {
-    $result = $api_instance->decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address);
+    $result = $api_instance->decision($data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->decision: ', $e->getMessage(), PHP_EOL;
@@ -89,9 +81,12 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [CreditInformation](docs/Model/CreditInformation.md)
+ - [Data](docs/Model/Data.md)
  - [Decision](docs/Model/Decision.md)
  - [FraudAlert](docs/Model/FraudAlert.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
+ - [InputCategoryCreditRule](docs/Model/InputCategoryCreditRule.md)
+ - [InputUser](docs/Model/InputUser.md)
  - [SuppliedInformation](docs/Model/SuppliedInformation.md)
 
 

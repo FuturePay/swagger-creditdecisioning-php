@@ -1,6 +1,6 @@
 <?php
 /**
- * SuppliedInformation
+ * Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace FuturePay\SDK\CreditDecisioning\Model;
 use \ArrayAccess;
 
 /**
- * SuppliedInformation Class Doc Comment
+ * Data Class Doc Comment
  *
  * @category    Class
  * @package     FuturePay\SDK\CreditDecisioning
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SuppliedInformation implements ArrayAccess
+class Data implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,21 +47,16 @@ class SuppliedInformation implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'supplied_information';
+    protected static $swaggerModelName = 'data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'firstName' => 'string',
-        'lastName' => 'string',
-        'address' => 'string',
-        'region' => 'string',
-        'city' => 'string',
-        'zip' => 'string',
-        'ssn' => 'string',
-        'dob' => 'string'
+        'user' => '\FuturePay\SDK\CreditDecisioning\Model\InputUser',
+        's3UrlCreditFile' => 'string',
+        'categoryCreditRule' => '\FuturePay\SDK\CreditDecisioning\Model\InputCategoryCreditRule'
     ];
 
     public static function swaggerTypes()
@@ -74,14 +69,9 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'firstName' => 'first_name',
-        'lastName' => 'last_name',
-        'address' => 'address',
-        'region' => 'region',
-        'city' => 'city',
-        'zip' => 'zip',
-        'ssn' => 'ssn',
-        'dob' => 'dob'
+        'user' => 'user',
+        's3UrlCreditFile' => 's3_url_credit_file',
+        'categoryCreditRule' => 'category_credit_rule'
     ];
 
 
@@ -90,14 +80,9 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'firstName' => 'setFirstName',
-        'lastName' => 'setLastName',
-        'address' => 'setAddress',
-        'region' => 'setRegion',
-        'city' => 'setCity',
-        'zip' => 'setZip',
-        'ssn' => 'setSsn',
-        'dob' => 'setDob'
+        'user' => 'setUser',
+        's3UrlCreditFile' => 'setS3UrlCreditFile',
+        'categoryCreditRule' => 'setCategoryCreditRule'
     ];
 
 
@@ -106,14 +91,9 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'firstName' => 'getFirstName',
-        'lastName' => 'getLastName',
-        'address' => 'getAddress',
-        'region' => 'getRegion',
-        'city' => 'getCity',
-        'zip' => 'getZip',
-        'ssn' => 'getSsn',
-        'dob' => 'getDob'
+        'user' => 'getUser',
+        's3UrlCreditFile' => 'getS3UrlCreditFile',
+        'categoryCreditRule' => 'getCategoryCreditRule'
     ];
 
     public static function attributeMap()
@@ -147,14 +127,9 @@ class SuppliedInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['zip'] = isset($data['zip']) ? $data['zip'] : null;
-        $this->container['ssn'] = isset($data['ssn']) ? $data['ssn'] : null;
-        $this->container['dob'] = isset($data['dob']) ? $data['dob'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['s3UrlCreditFile'] = isset($data['s3UrlCreditFile']) ? $data['s3UrlCreditFile'] : null;
+        $this->container['categoryCreditRule'] = isset($data['categoryCreditRule']) ? $data['categoryCreditRule'] : null;
     }
 
     /**
@@ -166,6 +141,12 @@ class SuppliedInformation implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['user'] === null) {
+            $invalid_properties[] = "'user' can't be null";
+        }
+        if ($this->container['s3UrlCreditFile'] === null) {
+            $invalid_properties[] = "'s3UrlCreditFile' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -178,174 +159,75 @@ class SuppliedInformation implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['user'] === null) {
+            return false;
+        }
+        if ($this->container['s3UrlCreditFile'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets firstName
-     * @return string
+     * Gets user
+     * @return \FuturePay\SDK\CreditDecisioning\Model\InputUser
      */
-    public function getFirstName()
+    public function getUser()
     {
-        return $this->container['firstName'];
+        return $this->container['user'];
     }
 
     /**
-     * Sets firstName
-     * @param string $firstName
+     * Sets user
+     * @param \FuturePay\SDK\CreditDecisioning\Model\InputUser $user
      * @return $this
      */
-    public function setFirstName($firstName)
+    public function setUser($user)
     {
-        $this->container['firstName'] = $firstName;
+        $this->container['user'] = $user;
 
         return $this;
     }
 
     /**
-     * Gets lastName
+     * Gets s3UrlCreditFile
      * @return string
      */
-    public function getLastName()
+    public function getS3UrlCreditFile()
     {
-        return $this->container['lastName'];
+        return $this->container['s3UrlCreditFile'];
     }
 
     /**
-     * Sets lastName
-     * @param string $lastName
+     * Sets s3UrlCreditFile
+     * @param string $s3UrlCreditFile
      * @return $this
      */
-    public function setLastName($lastName)
+    public function setS3UrlCreditFile($s3UrlCreditFile)
     {
-        $this->container['lastName'] = $lastName;
+        $this->container['s3UrlCreditFile'] = $s3UrlCreditFile;
 
         return $this;
     }
 
     /**
-     * Gets address
-     * @return string
+     * Gets categoryCreditRule
+     * @return \FuturePay\SDK\CreditDecisioning\Model\InputCategoryCreditRule
      */
-    public function getAddress()
+    public function getCategoryCreditRule()
     {
-        return $this->container['address'];
+        return $this->container['categoryCreditRule'];
     }
 
     /**
-     * Sets address
-     * @param string $address
+     * Sets categoryCreditRule
+     * @param \FuturePay\SDK\CreditDecisioning\Model\InputCategoryCreditRule $categoryCreditRule
      * @return $this
      */
-    public function setAddress($address)
+    public function setCategoryCreditRule($categoryCreditRule)
     {
-        $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets region
-     * @return string
-     */
-    public function getRegion()
-    {
-        return $this->container['region'];
-    }
-
-    /**
-     * Sets region
-     * @param string $region
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        $this->container['region'] = $region;
-
-        return $this;
-    }
-
-    /**
-     * Gets city
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->container['city'];
-    }
-
-    /**
-     * Sets city
-     * @param string $city
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets zip
-     * @return string
-     */
-    public function getZip()
-    {
-        return $this->container['zip'];
-    }
-
-    /**
-     * Sets zip
-     * @param string $zip
-     * @return $this
-     */
-    public function setZip($zip)
-    {
-        $this->container['zip'] = $zip;
-
-        return $this;
-    }
-
-    /**
-     * Gets ssn
-     * @return string
-     */
-    public function getSsn()
-    {
-        return $this->container['ssn'];
-    }
-
-    /**
-     * Sets ssn
-     * @param string $ssn
-     * @return $this
-     */
-    public function setSsn($ssn)
-    {
-        $this->container['ssn'] = $ssn;
-
-        return $this;
-    }
-
-    /**
-     * Gets dob
-     * @return string
-     */
-    public function getDob()
-    {
-        return $this->container['dob'];
-    }
-
-    /**
-     * Sets dob
-     * @param string $dob
-     * @return $this
-     */
-    public function setDob($dob)
-    {
-        $this->container['dob'] = $dob;
+        $this->container['categoryCreditRule'] = $categoryCreditRule;
 
         return $this;
     }

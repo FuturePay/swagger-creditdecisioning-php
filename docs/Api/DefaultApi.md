@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **decision**
-> \FuturePay\SDK\CreditDecisioning\Model\InlineResponse200 decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
+> \FuturePay\SDK\CreditDecisioning\Model\InlineResponse200 decision($data)
 
 Submit some information to perform a decision on
 
@@ -20,18 +20,10 @@ Submit some information to perform a decision on
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new FuturePay\SDK\CreditDecisioning\Api\DefaultApi();
-$creditFile = "/path/to/file.txt"; // \SplFileObject | TUNA Customer Credit File
-$firstName = "firstName_example"; // string | 
-$lastName = "lastName_example"; // string | 
-$city = "city_example"; // string | 
-$region = "region_example"; // string | 
-$zip = "zip_example"; // string | 
-$dob = "dob_example"; // string | 
-$ssn = "ssn_example"; // string | 
-$address = "address_example"; // string | 
+$data = new \FuturePay\SDK\CreditDecisioning\Model\Data(); // \FuturePay\SDK\CreditDecisioning\Model\Data | User information
 
 try {
-    $result = $api_instance->decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address);
+    $result = $api_instance->decision($data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->decision: ', $e->getMessage(), PHP_EOL;
@@ -43,15 +35,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **creditFile** | **\SplFileObject**| TUNA Customer Credit File |
- **firstName** | **string**|  |
- **lastName** | **string**|  |
- **city** | **string**|  |
- **region** | **string**|  |
- **zip** | **string**|  |
- **dob** | **string**|  |
- **ssn** | **string**|  |
- **address** | **string**|  |
+ **data** | [**\FuturePay\SDK\CreditDecisioning\Model\Data**](../Model/\FuturePay\SDK\CreditDecisioning\Model\Data.md)| User information |
 
 ### Return type
 
@@ -63,7 +47,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

@@ -92,21 +92,13 @@ class DefaultApi
      *
      * Submit some information to perform a decision on
      *
-     * @param \SplFileObject $creditFile TUNA Customer Credit File (required)
-     * @param string $firstName  (required)
-     * @param string $lastName  (required)
-     * @param string $city  (required)
-     * @param string $region  (required)
-     * @param string $zip  (required)
-     * @param string $dob  (required)
-     * @param string $ssn  (required)
-     * @param string $address  (required)
+     * @param \FuturePay\SDK\CreditDecisioning\Model\Data $data User information (required)
      * @throws \FuturePay\SDK\CreditDecisioning\ApiException on non-2xx response
      * @return \FuturePay\SDK\CreditDecisioning\Model\InlineResponse200
      */
-    public function decision($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
+    public function decision($data)
     {
-        list($response) = $this->decisionWithHttpInfo($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address);
+        list($response) = $this->decisionWithHttpInfo($data);
         return $response;
     }
 
@@ -115,55 +107,15 @@ class DefaultApi
      *
      * Submit some information to perform a decision on
      *
-     * @param \SplFileObject $creditFile TUNA Customer Credit File (required)
-     * @param string $firstName  (required)
-     * @param string $lastName  (required)
-     * @param string $city  (required)
-     * @param string $region  (required)
-     * @param string $zip  (required)
-     * @param string $dob  (required)
-     * @param string $ssn  (required)
-     * @param string $address  (required)
+     * @param \FuturePay\SDK\CreditDecisioning\Model\Data $data User information (required)
      * @throws \FuturePay\SDK\CreditDecisioning\ApiException on non-2xx response
      * @return array of \FuturePay\SDK\CreditDecisioning\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function decisionWithHttpInfo($creditFile, $firstName, $lastName, $city, $region, $zip, $dob, $ssn, $address)
+    public function decisionWithHttpInfo($data)
     {
-        // verify the required parameter 'creditFile' is set
-        if ($creditFile === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $creditFile when calling decision');
-        }
-        // verify the required parameter 'firstName' is set
-        if ($firstName === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $firstName when calling decision');
-        }
-        // verify the required parameter 'lastName' is set
-        if ($lastName === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lastName when calling decision');
-        }
-        // verify the required parameter 'city' is set
-        if ($city === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $city when calling decision');
-        }
-        // verify the required parameter 'region' is set
-        if ($region === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $region when calling decision');
-        }
-        // verify the required parameter 'zip' is set
-        if ($zip === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $zip when calling decision');
-        }
-        // verify the required parameter 'dob' is set
-        if ($dob === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $dob when calling decision');
-        }
-        // verify the required parameter 'ssn' is set
-        if ($ssn === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $ssn when calling decision');
-        }
-        // verify the required parameter 'address' is set
-        if ($address === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $address when calling decision');
+        // verify the required parameter 'data' is set
+        if ($data === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $data when calling decision');
         }
         // parse inputs
         $resourcePath = "/v1/decision";
@@ -175,54 +127,17 @@ class DefaultApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['multipart/form-data']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        // form params
-        if ($creditFile !== null) {
-            // PHP 5.5 introduced a CurlFile object that deprecates the old @filename syntax
-            // See: https://wiki.php.net/rfc/curl-file-upload
-            if (function_exists('curl_file_create')) {
-                $formParams['credit_file'] = curl_file_create($this->apiClient->getSerializer()->toFormValue($creditFile));
-            } else {
-                $formParams['credit_file'] = '@' . $this->apiClient->getSerializer()->toFormValue($creditFile);
-            }
+        // body params
+        $_tempBody = null;
+        if (isset($data)) {
+            $_tempBody = $data;
         }
-        // form params
-        if ($firstName !== null) {
-            $formParams['first_name'] = $this->apiClient->getSerializer()->toFormValue($firstName);
-        }
-        // form params
-        if ($lastName !== null) {
-            $formParams['last_name'] = $this->apiClient->getSerializer()->toFormValue($lastName);
-        }
-        // form params
-        if ($city !== null) {
-            $formParams['city'] = $this->apiClient->getSerializer()->toFormValue($city);
-        }
-        // form params
-        if ($region !== null) {
-            $formParams['region'] = $this->apiClient->getSerializer()->toFormValue($region);
-        }
-        // form params
-        if ($zip !== null) {
-            $formParams['zip'] = $this->apiClient->getSerializer()->toFormValue($zip);
-        }
-        // form params
-        if ($dob !== null) {
-            $formParams['dob'] = $this->apiClient->getSerializer()->toFormValue($dob);
-        }
-        // form params
-        if ($ssn !== null) {
-            $formParams['ssn'] = $this->apiClient->getSerializer()->toFormValue($ssn);
-        }
-        // form params
-        if ($address !== null) {
-            $formParams['address'] = $this->apiClient->getSerializer()->toFormValue($address);
-        }
-        
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present

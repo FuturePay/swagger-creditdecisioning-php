@@ -1,6 +1,6 @@
 <?php
 /**
- * SuppliedInformation
+ * InputUser
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace FuturePay\SDK\CreditDecisioning\Model;
 use \ArrayAccess;
 
 /**
- * SuppliedInformation Class Doc Comment
+ * InputUser Class Doc Comment
  *
  * @category    Class
  * @package     FuturePay\SDK\CreditDecisioning
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SuppliedInformation implements ArrayAccess
+class InputUser implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class SuppliedInformation implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'supplied_information';
+    protected static $swaggerModelName = 'input_user';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,12 +56,12 @@ class SuppliedInformation implements ArrayAccess
     protected static $swaggerTypes = [
         'firstName' => 'string',
         'lastName' => 'string',
-        'address' => 'string',
-        'region' => 'string',
         'city' => 'string',
+        'region' => 'string',
         'zip' => 'string',
+        'dob' => 'string',
         'ssn' => 'string',
-        'dob' => 'string'
+        'address' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -76,12 +76,12 @@ class SuppliedInformation implements ArrayAccess
     protected static $attributeMap = [
         'firstName' => 'first_name',
         'lastName' => 'last_name',
-        'address' => 'address',
-        'region' => 'region',
         'city' => 'city',
+        'region' => 'region',
         'zip' => 'zip',
+        'dob' => 'dob',
         'ssn' => 'ssn',
-        'dob' => 'dob'
+        'address' => 'address'
     ];
 
 
@@ -92,12 +92,12 @@ class SuppliedInformation implements ArrayAccess
     protected static $setters = [
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
-        'address' => 'setAddress',
-        'region' => 'setRegion',
         'city' => 'setCity',
+        'region' => 'setRegion',
         'zip' => 'setZip',
+        'dob' => 'setDob',
         'ssn' => 'setSsn',
-        'dob' => 'setDob'
+        'address' => 'setAddress'
     ];
 
 
@@ -108,12 +108,12 @@ class SuppliedInformation implements ArrayAccess
     protected static $getters = [
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
-        'address' => 'getAddress',
-        'region' => 'getRegion',
         'city' => 'getCity',
+        'region' => 'getRegion',
         'zip' => 'getZip',
+        'dob' => 'getDob',
         'ssn' => 'getSsn',
-        'dob' => 'getDob'
+        'address' => 'getAddress'
     ];
 
     public static function attributeMap()
@@ -149,12 +149,12 @@ class SuppliedInformation implements ArrayAccess
     {
         $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['zip'] = isset($data['zip']) ? $data['zip'] : null;
-        $this->container['ssn'] = isset($data['ssn']) ? $data['ssn'] : null;
         $this->container['dob'] = isset($data['dob']) ? $data['dob'] : null;
+        $this->container['ssn'] = isset($data['ssn']) ? $data['ssn'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
     }
 
     /**
@@ -166,6 +166,30 @@ class SuppliedInformation implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['firstName'] === null) {
+            $invalid_properties[] = "'firstName' can't be null";
+        }
+        if ($this->container['lastName'] === null) {
+            $invalid_properties[] = "'lastName' can't be null";
+        }
+        if ($this->container['city'] === null) {
+            $invalid_properties[] = "'city' can't be null";
+        }
+        if ($this->container['region'] === null) {
+            $invalid_properties[] = "'region' can't be null";
+        }
+        if ($this->container['zip'] === null) {
+            $invalid_properties[] = "'zip' can't be null";
+        }
+        if ($this->container['dob'] === null) {
+            $invalid_properties[] = "'dob' can't be null";
+        }
+        if ($this->container['ssn'] === null) {
+            $invalid_properties[] = "'ssn' can't be null";
+        }
+        if ($this->container['address'] === null) {
+            $invalid_properties[] = "'address' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -178,6 +202,30 @@ class SuppliedInformation implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['firstName'] === null) {
+            return false;
+        }
+        if ($this->container['lastName'] === null) {
+            return false;
+        }
+        if ($this->container['city'] === null) {
+            return false;
+        }
+        if ($this->container['region'] === null) {
+            return false;
+        }
+        if ($this->container['zip'] === null) {
+            return false;
+        }
+        if ($this->container['dob'] === null) {
+            return false;
+        }
+        if ($this->container['ssn'] === null) {
+            return false;
+        }
+        if ($this->container['address'] === null) {
+            return false;
+        }
         return true;
     }
 
@@ -225,22 +273,22 @@ class SuppliedInformation implements ArrayAccess
     }
 
     /**
-     * Gets address
+     * Gets city
      * @return string
      */
-    public function getAddress()
+    public function getCity()
     {
-        return $this->container['address'];
+        return $this->container['city'];
     }
 
     /**
-     * Sets address
-     * @param string $address
+     * Sets city
+     * @param string $city
      * @return $this
      */
-    public function setAddress($address)
+    public function setCity($city)
     {
-        $this->container['address'] = $address;
+        $this->container['city'] = $city;
 
         return $this;
     }
@@ -267,27 +315,6 @@ class SuppliedInformation implements ArrayAccess
     }
 
     /**
-     * Gets city
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->container['city'];
-    }
-
-    /**
-     * Sets city
-     * @param string $city
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
      * Gets zip
      * @return string
      */
@@ -304,6 +331,27 @@ class SuppliedInformation implements ArrayAccess
     public function setZip($zip)
     {
         $this->container['zip'] = $zip;
+
+        return $this;
+    }
+
+    /**
+     * Gets dob
+     * @return string
+     */
+    public function getDob()
+    {
+        return $this->container['dob'];
+    }
+
+    /**
+     * Sets dob
+     * @param string $dob
+     * @return $this
+     */
+    public function setDob($dob)
+    {
+        $this->container['dob'] = $dob;
 
         return $this;
     }
@@ -330,22 +378,22 @@ class SuppliedInformation implements ArrayAccess
     }
 
     /**
-     * Gets dob
+     * Gets address
      * @return string
      */
-    public function getDob()
+    public function getAddress()
     {
-        return $this->container['dob'];
+        return $this->container['address'];
     }
 
     /**
-     * Sets dob
-     * @param string $dob
+     * Sets address
+     * @param string $address
      * @return $this
      */
-    public function setDob($dob)
+    public function setAddress($address)
     {
-        $this->container['dob'] = $dob;
+        $this->container['address'] = $address;
 
         return $this;
     }

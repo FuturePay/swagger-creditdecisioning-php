@@ -1,6 +1,6 @@
 <?php
 /**
- * SuppliedInformation
+ * InputCategoryCreditRule
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace FuturePay\SDK\CreditDecisioning\Model;
 use \ArrayAccess;
 
 /**
- * SuppliedInformation Class Doc Comment
+ * InputCategoryCreditRule Class Doc Comment
  *
  * @category    Class
  * @package     FuturePay\SDK\CreditDecisioning
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SuppliedInformation implements ArrayAccess
+class InputCategoryCreditRule implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,21 +47,17 @@ class SuppliedInformation implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'supplied_information';
+    protected static $swaggerModelName = 'input_category_credit_rule';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'firstName' => 'string',
-        'lastName' => 'string',
-        'address' => 'string',
-        'region' => 'string',
-        'city' => 'string',
-        'zip' => 'string',
-        'ssn' => 'string',
-        'dob' => 'string'
+        'minimumFicoScore' => 'int',
+        'creditLine' => 'int',
+        'minimumMonthlyIncome' => 'int',
+        'dti' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -74,14 +70,10 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'firstName' => 'first_name',
-        'lastName' => 'last_name',
-        'address' => 'address',
-        'region' => 'region',
-        'city' => 'city',
-        'zip' => 'zip',
-        'ssn' => 'ssn',
-        'dob' => 'dob'
+        'minimumFicoScore' => 'minimum_fico_score',
+        'creditLine' => 'credit_line',
+        'minimumMonthlyIncome' => 'minimum_monthly_income',
+        'dti' => 'dti'
     ];
 
 
@@ -90,14 +82,10 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'firstName' => 'setFirstName',
-        'lastName' => 'setLastName',
-        'address' => 'setAddress',
-        'region' => 'setRegion',
-        'city' => 'setCity',
-        'zip' => 'setZip',
-        'ssn' => 'setSsn',
-        'dob' => 'setDob'
+        'minimumFicoScore' => 'setMinimumFicoScore',
+        'creditLine' => 'setCreditLine',
+        'minimumMonthlyIncome' => 'setMinimumMonthlyIncome',
+        'dti' => 'setDti'
     ];
 
 
@@ -106,14 +94,10 @@ class SuppliedInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'firstName' => 'getFirstName',
-        'lastName' => 'getLastName',
-        'address' => 'getAddress',
-        'region' => 'getRegion',
-        'city' => 'getCity',
-        'zip' => 'getZip',
-        'ssn' => 'getSsn',
-        'dob' => 'getDob'
+        'minimumFicoScore' => 'getMinimumFicoScore',
+        'creditLine' => 'getCreditLine',
+        'minimumMonthlyIncome' => 'getMinimumMonthlyIncome',
+        'dti' => 'getDti'
     ];
 
     public static function attributeMap()
@@ -147,14 +131,10 @@ class SuppliedInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['zip'] = isset($data['zip']) ? $data['zip'] : null;
-        $this->container['ssn'] = isset($data['ssn']) ? $data['ssn'] : null;
-        $this->container['dob'] = isset($data['dob']) ? $data['dob'] : null;
+        $this->container['minimumFicoScore'] = isset($data['minimumFicoScore']) ? $data['minimumFicoScore'] : null;
+        $this->container['creditLine'] = isset($data['creditLine']) ? $data['creditLine'] : null;
+        $this->container['minimumMonthlyIncome'] = isset($data['minimumMonthlyIncome']) ? $data['minimumMonthlyIncome'] : null;
+        $this->container['dti'] = isset($data['dti']) ? $data['dti'] : null;
     }
 
     /**
@@ -166,6 +146,18 @@ class SuppliedInformation implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['minimumFicoScore'] === null) {
+            $invalid_properties[] = "'minimumFicoScore' can't be null";
+        }
+        if ($this->container['creditLine'] === null) {
+            $invalid_properties[] = "'creditLine' can't be null";
+        }
+        if ($this->container['minimumMonthlyIncome'] === null) {
+            $invalid_properties[] = "'minimumMonthlyIncome' can't be null";
+        }
+        if ($this->container['dti'] === null) {
+            $invalid_properties[] = "'dti' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -178,174 +170,102 @@ class SuppliedInformation implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['minimumFicoScore'] === null) {
+            return false;
+        }
+        if ($this->container['creditLine'] === null) {
+            return false;
+        }
+        if ($this->container['minimumMonthlyIncome'] === null) {
+            return false;
+        }
+        if ($this->container['dti'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets firstName
-     * @return string
+     * Gets minimumFicoScore
+     * @return int
      */
-    public function getFirstName()
+    public function getMinimumFicoScore()
     {
-        return $this->container['firstName'];
+        return $this->container['minimumFicoScore'];
     }
 
     /**
-     * Sets firstName
-     * @param string $firstName
+     * Sets minimumFicoScore
+     * @param int $minimumFicoScore
      * @return $this
      */
-    public function setFirstName($firstName)
+    public function setMinimumFicoScore($minimumFicoScore)
     {
-        $this->container['firstName'] = $firstName;
+        $this->container['minimumFicoScore'] = $minimumFicoScore;
 
         return $this;
     }
 
     /**
-     * Gets lastName
-     * @return string
+     * Gets creditLine
+     * @return int
      */
-    public function getLastName()
+    public function getCreditLine()
     {
-        return $this->container['lastName'];
+        return $this->container['creditLine'];
     }
 
     /**
-     * Sets lastName
-     * @param string $lastName
+     * Sets creditLine
+     * @param int $creditLine
      * @return $this
      */
-    public function setLastName($lastName)
+    public function setCreditLine($creditLine)
     {
-        $this->container['lastName'] = $lastName;
+        $this->container['creditLine'] = $creditLine;
 
         return $this;
     }
 
     /**
-     * Gets address
-     * @return string
+     * Gets minimumMonthlyIncome
+     * @return int
      */
-    public function getAddress()
+    public function getMinimumMonthlyIncome()
     {
-        return $this->container['address'];
+        return $this->container['minimumMonthlyIncome'];
     }
 
     /**
-     * Sets address
-     * @param string $address
+     * Sets minimumMonthlyIncome
+     * @param int $minimumMonthlyIncome
      * @return $this
      */
-    public function setAddress($address)
+    public function setMinimumMonthlyIncome($minimumMonthlyIncome)
     {
-        $this->container['address'] = $address;
+        $this->container['minimumMonthlyIncome'] = $minimumMonthlyIncome;
 
         return $this;
     }
 
     /**
-     * Gets region
-     * @return string
+     * Gets dti
+     * @return float
      */
-    public function getRegion()
+    public function getDti()
     {
-        return $this->container['region'];
+        return $this->container['dti'];
     }
 
     /**
-     * Sets region
-     * @param string $region
+     * Sets dti
+     * @param float $dti
      * @return $this
      */
-    public function setRegion($region)
+    public function setDti($dti)
     {
-        $this->container['region'] = $region;
-
-        return $this;
-    }
-
-    /**
-     * Gets city
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->container['city'];
-    }
-
-    /**
-     * Sets city
-     * @param string $city
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets zip
-     * @return string
-     */
-    public function getZip()
-    {
-        return $this->container['zip'];
-    }
-
-    /**
-     * Sets zip
-     * @param string $zip
-     * @return $this
-     */
-    public function setZip($zip)
-    {
-        $this->container['zip'] = $zip;
-
-        return $this;
-    }
-
-    /**
-     * Gets ssn
-     * @return string
-     */
-    public function getSsn()
-    {
-        return $this->container['ssn'];
-    }
-
-    /**
-     * Sets ssn
-     * @param string $ssn
-     * @return $this
-     */
-    public function setSsn($ssn)
-    {
-        $this->container['ssn'] = $ssn;
-
-        return $this;
-    }
-
-    /**
-     * Gets dob
-     * @return string
-     */
-    public function getDob()
-    {
-        return $this->container['dob'];
-    }
-
-    /**
-     * Sets dob
-     * @param string $dob
-     * @return $this
-     */
-    public function setDob($dob)
-    {
-        $this->container['dob'] = $dob;
+        $this->container['dti'] = $dti;
 
         return $this;
     }
