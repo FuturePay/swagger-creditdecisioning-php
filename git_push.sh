@@ -18,7 +18,9 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="some updates for ability to pay and overall api spec"
+    release_note="added a debug image to use for integration testing
+
+Signed-off-by: Luke Chisholm <lchisholm@futurepay.com>"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
