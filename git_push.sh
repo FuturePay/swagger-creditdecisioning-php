@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="fixed s3 services
+    release_note="fixed misspelling
 
 Signed-off-by: Luke Chisholm <lchisholm@futurepay.com>"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
