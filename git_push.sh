@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="updated the task definition a little bit to have a better log group
+    release_note="added https scheme for non local environments
 
 Signed-off-by: Luke Chisholm <lchisholm@futurepay.com>"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
