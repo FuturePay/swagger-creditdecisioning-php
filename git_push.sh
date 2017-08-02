@@ -18,7 +18,11 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="added https scheme for non local environments
+    release_note="FP-2606 SSN and DOB mismatch applications should trigger need more info email not AA
+
+Currently when a customer has an SSN Mismatch they get an AA email that tells them the SSN supplied and the SSN returned from TU.  This is too much information to return and not a valid reason to send an AA letter (as this is not a decision based on the credit worthiness but on an internal data point check).
+
+When a customer gets an SSN mismatch or a DOB mismatch we should send them a Need more info email not an AA email.
 
 Signed-off-by: Luke Chisholm <lchisholm@futurepay.com>"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
