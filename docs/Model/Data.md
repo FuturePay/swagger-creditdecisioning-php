@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **user** | [**\FuturePay\SDK\CreditDecisioning\Model\InputUser**](InputUser.md) |  | 
+**previousSteps** | [**\FuturePay\SDK\CreditDecisioning\Model\InputPreviousSteps**](InputPreviousSteps.md) |  | [optional] 
 **s3UrlCreditFile** | **string** |  | 
 **categoryCreditRule** | [**\FuturePay\SDK\CreditDecisioning\Model\InputCategoryCreditRule**](InputCategoryCreditRule.md) |  | [optional] 
 

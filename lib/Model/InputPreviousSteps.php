@@ -1,6 +1,6 @@
 <?php
 /**
- * Data
+ * InputPreviousSteps
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace FuturePay\SDK\CreditDecisioning\Model;
 use \ArrayAccess;
 
 /**
- * Data Class Doc Comment
+ * InputPreviousSteps Class Doc Comment
  *
  * @category    Class
  * @package     FuturePay\SDK\CreditDecisioning
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Data implements ArrayAccess
+class InputPreviousSteps implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,14 @@ class Data implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'data';
+    protected static $swaggerModelName = 'input_previous_steps';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => '\FuturePay\SDK\CreditDecisioning\Model\InputUser',
-        'previousSteps' => '\FuturePay\SDK\CreditDecisioning\Model\InputPreviousSteps',
-        's3UrlCreditFile' => 'string',
-        'categoryCreditRule' => '\FuturePay\SDK\CreditDecisioning\Model\InputCategoryCreditRule'
+        
     ];
 
     public static function swaggerTypes()
@@ -70,10 +67,7 @@ class Data implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user' => 'user',
-        'previousSteps' => 'previous_steps',
-        's3UrlCreditFile' => 's3_url_credit_file',
-        'categoryCreditRule' => 'category_credit_rule'
+        
     ];
 
 
@@ -82,10 +76,7 @@ class Data implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user' => 'setUser',
-        'previousSteps' => 'setPreviousSteps',
-        's3UrlCreditFile' => 'setS3UrlCreditFile',
-        'categoryCreditRule' => 'setCategoryCreditRule'
+        
     ];
 
 
@@ -94,10 +85,7 @@ class Data implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user' => 'getUser',
-        'previousSteps' => 'getPreviousSteps',
-        's3UrlCreditFile' => 'getS3UrlCreditFile',
-        'categoryCreditRule' => 'getCategoryCreditRule'
+        
     ];
 
     public static function attributeMap()
@@ -131,10 +119,6 @@ class Data implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['previousSteps'] = isset($data['previousSteps']) ? $data['previousSteps'] : null;
-        $this->container['s3UrlCreditFile'] = isset($data['s3UrlCreditFile']) ? $data['s3UrlCreditFile'] : null;
-        $this->container['categoryCreditRule'] = isset($data['categoryCreditRule']) ? $data['categoryCreditRule'] : null;
     }
 
     /**
@@ -144,14 +128,8 @@ class Data implements ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalid_properties = [];
+        $invalid_properties = parent::listInvalidProperties();
 
-        if ($this->container['user'] === null) {
-            $invalid_properties[] = "'user' can't be null";
-        }
-        if ($this->container['s3UrlCreditFile'] === null) {
-            $invalid_properties[] = "'s3UrlCreditFile' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -163,100 +141,13 @@ class Data implements ArrayAccess
      */
     public function valid()
     {
+        if (!parent::valid()) {
+            return false;
+        }
 
-        if ($this->container['user'] === null) {
-            return false;
-        }
-        if ($this->container['s3UrlCreditFile'] === null) {
-            return false;
-        }
         return true;
     }
 
-
-    /**
-     * Gets user
-     * @return \FuturePay\SDK\CreditDecisioning\Model\InputUser
-     */
-    public function getUser()
-    {
-        return $this->container['user'];
-    }
-
-    /**
-     * Sets user
-     * @param \FuturePay\SDK\CreditDecisioning\Model\InputUser $user
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        $this->container['user'] = $user;
-
-        return $this;
-    }
-
-    /**
-     * Gets previousSteps
-     * @return \FuturePay\SDK\CreditDecisioning\Model\InputPreviousSteps
-     */
-    public function getPreviousSteps()
-    {
-        return $this->container['previousSteps'];
-    }
-
-    /**
-     * Sets previousSteps
-     * @param \FuturePay\SDK\CreditDecisioning\Model\InputPreviousSteps $previousSteps
-     * @return $this
-     */
-    public function setPreviousSteps($previousSteps)
-    {
-        $this->container['previousSteps'] = $previousSteps;
-
-        return $this;
-    }
-
-    /**
-     * Gets s3UrlCreditFile
-     * @return string
-     */
-    public function getS3UrlCreditFile()
-    {
-        return $this->container['s3UrlCreditFile'];
-    }
-
-    /**
-     * Sets s3UrlCreditFile
-     * @param string $s3UrlCreditFile
-     * @return $this
-     */
-    public function setS3UrlCreditFile($s3UrlCreditFile)
-    {
-        $this->container['s3UrlCreditFile'] = $s3UrlCreditFile;
-
-        return $this;
-    }
-
-    /**
-     * Gets categoryCreditRule
-     * @return \FuturePay\SDK\CreditDecisioning\Model\InputCategoryCreditRule
-     */
-    public function getCategoryCreditRule()
-    {
-        return $this->container['categoryCreditRule'];
-    }
-
-    /**
-     * Sets categoryCreditRule
-     * @param \FuturePay\SDK\CreditDecisioning\Model\InputCategoryCreditRule $categoryCreditRule
-     * @return $this
-     */
-    public function setCategoryCreditRule($categoryCreditRule)
-    {
-        $this->container['categoryCreditRule'] = $categoryCreditRule;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

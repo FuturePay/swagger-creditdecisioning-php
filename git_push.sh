@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="FP-2550 send back the HRA in the extra section of the response
+    release_note="FP-2591 only run steps that haven't already been run
 
 Signed-off-by: Luke Chisholm <lchisholm@futurepay.com>"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
