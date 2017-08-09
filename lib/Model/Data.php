@@ -55,7 +55,7 @@ class Data implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'user' => '\FuturePay\SDK\CreditDecisioning\Model\InputUser',
-        'previousSteps' => '\FuturePay\SDK\CreditDecisioning\Model\InputPreviousSteps',
+        'previousSteps' => 'string[]',
         's3UrlCreditFile' => 'string',
         'categoryCreditRule' => '\FuturePay\SDK\CreditDecisioning\Model\InputCategoryCreditRule'
     ];
@@ -197,7 +197,7 @@ class Data implements ArrayAccess
 
     /**
      * Gets previousSteps
-     * @return \FuturePay\SDK\CreditDecisioning\Model\InputPreviousSteps
+     * @return string[]
      */
     public function getPreviousSteps()
     {
@@ -206,7 +206,7 @@ class Data implements ArrayAccess
 
     /**
      * Sets previousSteps
-     * @param \FuturePay\SDK\CreditDecisioning\Model\InputPreviousSteps $previousSteps
+     * @param string[] $previousSteps
      * @return $this
      */
     public function setPreviousSteps($previousSteps)

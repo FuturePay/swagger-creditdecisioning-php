@@ -86,7 +86,6 @@ Class | Method | HTTP request | Description
  - [FraudAlert](docs/Model/FraudAlert.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InputCategoryCreditRule](docs/Model/InputCategoryCreditRule.md)
- - [InputPreviousSteps](docs/Model/InputPreviousSteps.md)
  - [InputUser](docs/Model/InputUser.md)
  - [SuppliedInformation](docs/Model/SuppliedInformation.md)
 
