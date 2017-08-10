@@ -18,9 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="FP-2591 only run steps that haven't already been run
-
-Signed-off-by: Luke Chisholm <lchisholm@futurepay.com>"
+    release_note="FP-2550 resolved issue: NO-HIT applications with wrong SSN are being auto-pended. No emails are triggering. It is throwing an: 'An error occurred, please try again or select another payment method.' error"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

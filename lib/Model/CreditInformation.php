@@ -63,7 +63,9 @@ class CreditInformation implements ArrayAccess
         'ssn' => 'string',
         'dob' => 'string',
         'fraudAlert' => '\FuturePay\SDK\CreditDecisioning\Model\FraudAlert',
-        'deceasedDate' => 'string'
+        'deceasedDate' => 'string',
+        'fileHit' => 'bool',
+        'fileHitDescriptor' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -85,7 +87,9 @@ class CreditInformation implements ArrayAccess
         'ssn' => 'ssn',
         'dob' => 'dob',
         'fraudAlert' => 'fraud_alert',
-        'deceasedDate' => 'deceased_date'
+        'deceasedDate' => 'deceased_date',
+        'fileHit' => 'file_hit',
+        'fileHitDescriptor' => 'file_hit_descriptor'
     ];
 
 
@@ -103,7 +107,9 @@ class CreditInformation implements ArrayAccess
         'ssn' => 'setSsn',
         'dob' => 'setDob',
         'fraudAlert' => 'setFraudAlert',
-        'deceasedDate' => 'setDeceasedDate'
+        'deceasedDate' => 'setDeceasedDate',
+        'fileHit' => 'setFileHit',
+        'fileHitDescriptor' => 'setFileHitDescriptor'
     ];
 
 
@@ -121,7 +127,9 @@ class CreditInformation implements ArrayAccess
         'ssn' => 'getSsn',
         'dob' => 'getDob',
         'fraudAlert' => 'getFraudAlert',
-        'deceasedDate' => 'getDeceasedDate'
+        'deceasedDate' => 'getDeceasedDate',
+        'fileHit' => 'getFileHit',
+        'fileHitDescriptor' => 'getFileHitDescriptor'
     ];
 
     public static function attributeMap()
@@ -165,6 +173,8 @@ class CreditInformation implements ArrayAccess
         $this->container['dob'] = isset($data['dob']) ? $data['dob'] : null;
         $this->container['fraudAlert'] = isset($data['fraudAlert']) ? $data['fraudAlert'] : null;
         $this->container['deceasedDate'] = isset($data['deceasedDate']) ? $data['deceasedDate'] : null;
+        $this->container['fileHit'] = isset($data['fileHit']) ? $data['fileHit'] : null;
+        $this->container['fileHitDescriptor'] = isset($data['fileHitDescriptor']) ? $data['fileHitDescriptor'] : null;
     }
 
     /**
@@ -398,6 +408,48 @@ class CreditInformation implements ArrayAccess
     public function setDeceasedDate($deceasedDate)
     {
         $this->container['deceasedDate'] = $deceasedDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets fileHit
+     * @return bool
+     */
+    public function getFileHit()
+    {
+        return $this->container['fileHit'];
+    }
+
+    /**
+     * Sets fileHit
+     * @param bool $fileHit
+     * @return $this
+     */
+    public function setFileHit($fileHit)
+    {
+        $this->container['fileHit'] = $fileHit;
+
+        return $this;
+    }
+
+    /**
+     * Gets fileHitDescriptor
+     * @return string
+     */
+    public function getFileHitDescriptor()
+    {
+        return $this->container['fileHitDescriptor'];
+    }
+
+    /**
+     * Sets fileHitDescriptor
+     * @param string $fileHitDescriptor
+     * @return $this
+     */
+    public function setFileHitDescriptor($fileHitDescriptor)
+    {
+        $this->container['fileHitDescriptor'] = $fileHitDescriptor;
 
         return $this;
     }

@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **dob** | **string** |  | [optional] 
 **fraudAlert** | [**\FuturePay\SDK\CreditDecisioning\Model\FraudAlert**](FraudAlert.md) |  | [optional] 
 **deceasedDate** | **string** |  | [optional] 
+**fileHit** | **bool** |  | [optional] 
+**fileHitDescriptor** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
