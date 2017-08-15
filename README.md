@@ -81,6 +81,11 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [CreditInformation](docs/Model/CreditInformation.md)
+ - [CreditSummary](docs/Model/CreditSummary.md)
+ - [CreditSummaryClosedWithBalanceAmount](docs/Model/CreditSummaryClosedWithBalanceAmount.md)
+ - [CreditSummaryInstallmentAmount](docs/Model/CreditSummaryInstallmentAmount.md)
+ - [CreditSummaryRevolvingAmount](docs/Model/CreditSummaryRevolvingAmount.md)
+ - [CreditSummaryTotalHistory](docs/Model/CreditSummaryTotalHistory.md)
  - [Data](docs/Model/Data.md)
  - [Decision](docs/Model/Decision.md)
  - [FraudAlert](docs/Model/FraudAlert.md)

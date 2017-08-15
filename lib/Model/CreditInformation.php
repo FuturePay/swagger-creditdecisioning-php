@@ -65,7 +65,8 @@ class CreditInformation implements ArrayAccess
         'fraudAlert' => '\FuturePay\SDK\CreditDecisioning\Model\FraudAlert',
         'deceasedDate' => 'string',
         'fileHit' => 'bool',
-        'fileHitDescriptor' => 'string'
+        'fileHitDescriptor' => 'string',
+        'creditSummary' => '\FuturePay\SDK\CreditDecisioning\Model\CreditSummary'
     ];
 
     public static function swaggerTypes()
@@ -89,7 +90,8 @@ class CreditInformation implements ArrayAccess
         'fraudAlert' => 'fraud_alert',
         'deceasedDate' => 'deceased_date',
         'fileHit' => 'file_hit',
-        'fileHitDescriptor' => 'file_hit_descriptor'
+        'fileHitDescriptor' => 'file_hit_descriptor',
+        'creditSummary' => 'credit_summary'
     ];
 
 
@@ -109,7 +111,8 @@ class CreditInformation implements ArrayAccess
         'fraudAlert' => 'setFraudAlert',
         'deceasedDate' => 'setDeceasedDate',
         'fileHit' => 'setFileHit',
-        'fileHitDescriptor' => 'setFileHitDescriptor'
+        'fileHitDescriptor' => 'setFileHitDescriptor',
+        'creditSummary' => 'setCreditSummary'
     ];
 
 
@@ -129,7 +132,8 @@ class CreditInformation implements ArrayAccess
         'fraudAlert' => 'getFraudAlert',
         'deceasedDate' => 'getDeceasedDate',
         'fileHit' => 'getFileHit',
-        'fileHitDescriptor' => 'getFileHitDescriptor'
+        'fileHitDescriptor' => 'getFileHitDescriptor',
+        'creditSummary' => 'getCreditSummary'
     ];
 
     public static function attributeMap()
@@ -175,6 +179,7 @@ class CreditInformation implements ArrayAccess
         $this->container['deceasedDate'] = isset($data['deceasedDate']) ? $data['deceasedDate'] : null;
         $this->container['fileHit'] = isset($data['fileHit']) ? $data['fileHit'] : null;
         $this->container['fileHitDescriptor'] = isset($data['fileHitDescriptor']) ? $data['fileHitDescriptor'] : null;
+        $this->container['creditSummary'] = isset($data['creditSummary']) ? $data['creditSummary'] : null;
     }
 
     /**
@@ -450,6 +455,27 @@ class CreditInformation implements ArrayAccess
     public function setFileHitDescriptor($fileHitDescriptor)
     {
         $this->container['fileHitDescriptor'] = $fileHitDescriptor;
+
+        return $this;
+    }
+
+    /**
+     * Gets creditSummary
+     * @return \FuturePay\SDK\CreditDecisioning\Model\CreditSummary
+     */
+    public function getCreditSummary()
+    {
+        return $this->container['creditSummary'];
+    }
+
+    /**
+     * Sets creditSummary
+     * @param \FuturePay\SDK\CreditDecisioning\Model\CreditSummary $creditSummary
+     * @return $this
+     */
+    public function setCreditSummary($creditSummary)
+    {
+        $this->container['creditSummary'] = $creditSummary;
 
         return $this;
     }

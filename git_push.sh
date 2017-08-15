@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="FP-2550 resolved issue: NO-HIT applications with wrong SSN are being auto-pended. No emails are triggering. It is throwing an: 'An error occurred, please try again or select another payment method.' error"
+    release_note="FP-2360 parse additional credit summary fields from credit files and return them"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
