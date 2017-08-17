@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="FP-2360 totalHistory was mislabeled and not returned via swagger"
+    release_note="FP-2592 When an application is declined for a potential OFAC match alert from TU, send the additional information needed e-mail and allow for reapplication."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
