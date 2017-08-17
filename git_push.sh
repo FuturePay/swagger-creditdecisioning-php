@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="FP-2360 parse additional credit summary fields from credit files and return them"
+    release_note="FP-2360 totalHistory was mislabeled and not returned via swagger"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
