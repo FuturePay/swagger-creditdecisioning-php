@@ -66,7 +66,8 @@ class CreditInformation implements ArrayAccess
         'deceasedDate' => 'string',
         'fileHit' => 'bool',
         'fileHitDescriptor' => 'string',
-        'creditSummary' => '\FuturePay\SDK\CreditDecisioning\Model\CreditSummary'
+        'creditSummary' => '\FuturePay\SDK\CreditDecisioning\Model\CreditSummary',
+        'idMismatchAlertType' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -91,7 +92,8 @@ class CreditInformation implements ArrayAccess
         'deceasedDate' => 'deceased_date',
         'fileHit' => 'file_hit',
         'fileHitDescriptor' => 'file_hit_descriptor',
-        'creditSummary' => 'credit_summary'
+        'creditSummary' => 'credit_summary',
+        'idMismatchAlertType' => 'id_mismatch_alert_type'
     ];
 
 
@@ -112,7 +114,8 @@ class CreditInformation implements ArrayAccess
         'deceasedDate' => 'setDeceasedDate',
         'fileHit' => 'setFileHit',
         'fileHitDescriptor' => 'setFileHitDescriptor',
-        'creditSummary' => 'setCreditSummary'
+        'creditSummary' => 'setCreditSummary',
+        'idMismatchAlertType' => 'setIdMismatchAlertType'
     ];
 
 
@@ -133,7 +136,8 @@ class CreditInformation implements ArrayAccess
         'deceasedDate' => 'getDeceasedDate',
         'fileHit' => 'getFileHit',
         'fileHitDescriptor' => 'getFileHitDescriptor',
-        'creditSummary' => 'getCreditSummary'
+        'creditSummary' => 'getCreditSummary',
+        'idMismatchAlertType' => 'getIdMismatchAlertType'
     ];
 
     public static function attributeMap()
@@ -180,6 +184,7 @@ class CreditInformation implements ArrayAccess
         $this->container['fileHit'] = isset($data['fileHit']) ? $data['fileHit'] : null;
         $this->container['fileHitDescriptor'] = isset($data['fileHitDescriptor']) ? $data['fileHitDescriptor'] : null;
         $this->container['creditSummary'] = isset($data['creditSummary']) ? $data['creditSummary'] : null;
+        $this->container['idMismatchAlertType'] = isset($data['idMismatchAlertType']) ? $data['idMismatchAlertType'] : null;
     }
 
     /**
@@ -476,6 +481,27 @@ class CreditInformation implements ArrayAccess
     public function setCreditSummary($creditSummary)
     {
         $this->container['creditSummary'] = $creditSummary;
+
+        return $this;
+    }
+
+    /**
+     * Gets idMismatchAlertType
+     * @return string
+     */
+    public function getIdMismatchAlertType()
+    {
+        return $this->container['idMismatchAlertType'];
+    }
+
+    /**
+     * Sets idMismatchAlertType
+     * @param string $idMismatchAlertType
+     * @return $this
+     */
+    public function setIdMismatchAlertType($idMismatchAlertType)
+    {
+        $this->container['idMismatchAlertType'] = $idMismatchAlertType;
 
         return $this;
     }

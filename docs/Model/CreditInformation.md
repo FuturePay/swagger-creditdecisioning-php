@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **fileHit** | **bool** |  | [optional] 
 **fileHitDescriptor** | **string** |  | [optional] 
 **creditSummary** | [**\FuturePay\SDK\CreditDecisioning\Model\CreditSummary**](CreditSummary.md) |  | [optional] 
+**idMismatchAlertType** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
